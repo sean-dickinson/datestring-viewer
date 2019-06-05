@@ -123,5 +123,14 @@ body {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
   }
+
+  .b-clockpicker-header{
+    padding-top: 0.3rem;
+  }
+
+  .b-clockpicker-header .b-clockpicker-time span{
+    height: 40px;
+    font-size: 40px;
+  }
 }
 </style>
