@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <section class="hero is-fullheight">
+    <section class="hero">
       <div class="hero-body">
         <div class="container">
-          <div class="box level">
-            <current-time class="level-item" :selectedDate="combinedDate"></current-time>
+          <div class="columns is-centered">
+            <div class="column is-half box level">
+              <current-time class="level-item" :selectedDate="combinedDate"></current-time>
+            </div>
           </div>
-          <div class="level">
-            <div class="level-item">
-              <b-datepicker v-model="date" inline></b-datepicker>
-            </div>
-            <div class="level-item">
-              <b-clockpicker v-model="time" class="is-primary" inline></b-clockpicker>
-            </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered is-vcentered">
+            <b-datepicker class="column is-narrow" v-model="date" inline></b-datepicker>
+            <b-clockpicker class="column is-narrow" v-model="time" inline></b-clockpicker>
           </div>
         </div>
       </div>
@@ -38,11 +42,6 @@ export default class App extends Vue {
     return new Date(d);
   }
 
-  public mounted() {
-    setInterval(() => {
-      this.time = new Date();
-    }, 20 * 1000);
-  }
 }
 </script>
 
@@ -115,14 +114,14 @@ body {
   background: $info;
 }
 
-.b-clockpicker{
+.b-clockpicker {
   .card {
-        border-radius: $radius;
-    }
+    border-radius: $radius;
+  }
 
-    .card-header {
-        border-top-left-radius: $radius;
-        border-top-right-radius: $radius;
-    }
+  .card-header {
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+  }
 }
 </style>
