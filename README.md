@@ -1,21 +1,3 @@
-# Easy-Date
+# Datestring Viewer
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+Easily view the ISO formatted datestring with locale timezone information for any date/time chosen.
